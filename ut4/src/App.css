@@ -1,7 +1,20 @@
 .App {
-  text-align: center;
+  display: flex; /* Utiliza Flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Altura de la pantalla completa */
+  background-color: #f0f0f0; /* Color de fondo opcional */
 }
 
+.card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 250px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

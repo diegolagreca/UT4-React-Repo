@@ -16,7 +16,7 @@ const InputDisplay = () => {
         value={inputValue}
         onChange={handleChange}
       />
-      <p>Usted ha ingresado: {inputValue}</p>
+      <p>Comentarios: {inputValue}</p>
     </div>
   );
 };

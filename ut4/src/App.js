@@ -1,8 +1,8 @@
 // src/App.js
 import React from 'react';
 import './App.css';
-import Card from './Card'; // Importar el componente Card modificado
-import InputDisplay from './InputDisplay'; // Nuevo componente de input
+import Card from './Card'; 
+import InputDisplay from './InputDisplay'; 
 
 function App() {
   return (
