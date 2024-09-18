@@ -13,27 +13,42 @@ function App() {
   // Función para agregar la tarea
   const addTask = () => {
     if (task.trim()) {  // Solo agrega la tarea si no está vacía
-      setTaskList([...taskList, task])
+      setTaskList([...taskList, { text: task, completed: false }])
       setTask('')       // Limpia el input
     }
   }
 
+  // Función para manejar el cambio del checkbox
+  const toggleComplete = (index) => {
+    const updatedTasks = taskList.map((task, i) => 
+      i === index ? { ...task, completed: !task.completed } : task
+    )
+    setTaskList(updatedTasks)
+  }
+
   return (
     <div className="App">
-      <h2>TA6</h2>
+      <h1>TA6 + TA7</h1>
       <div>
         <input
           type="text"
           value={task}
           onChange={handleInputChange}
-          placeholder="Nueva tarea..."
+          placeholder="Escribe una tarea..."
         />
         <button onClick={addTask}>+ tarea</button>
       </div>
 
       <ul>
         {taskList.map((task, index) => (
-          <li key={index}>{task}</li>
+          <li key={index} style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
+            <input 
+              type="checkbox" 
+              checked={task.completed} 
+              onChange={() => toggleComplete(index)} 
+            />
+            {task.text}
+          </li>
         ))}
       </ul>
     </div>
