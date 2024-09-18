@@ -1,0 +1,22 @@
+/* Estilo para el tema claro */
+.light {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    width: 300px;
+  }
+  
+  /* Estilo para el tema oscuro */
+  .dark {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    width: 300px;
+  }
+  
